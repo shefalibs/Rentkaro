@@ -1,0 +1,17 @@
+--
+-- Table structure for table `city`
+--
+
+DROP TABLE IF EXISTS `city`;
+
+
+CREATE TABLE `city` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cityid` varchar(10) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+); 
+
+
+INSERT INTO `city` VALUES (1,'blr','bangalore'),(2,'hyd','hyderabad'),(3,'pun','pune');
+

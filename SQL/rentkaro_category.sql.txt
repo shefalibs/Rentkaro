@@ -1,0 +1,15 @@
+--
+-- Table structure for table `category`
+--
+
+DROP TABLE IF EXISTS `category`;
+
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `categoryid` varchar(10) DEFAULT NULL,
+  `category` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+INSERT INTO `category` VALUES (1,'auto','automobiles'),(2,'elec','electronics'),(3,'fur','furniture');
