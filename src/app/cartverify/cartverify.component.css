@@ -1,0 +1,6 @@
+.pay:hover{
+    transform: scale(1.2);
+}
+.highlight-error {
+    border-color: red;
+  }

@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav class="navbar  navbar-expand-lg navbar-dark "style="background-color:#333030 ;">
+        <!-- Navbar content -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ">
+           
+      <li>&emsp;&nbsp;</li>
+   <!-- Search form -->
+      </ul>
+      
+      <ul class="navbar-nav ">
+          <li class="nav-item">
+            <form class="form-inline active-cyan-3 active-cyan-4 ">
+              <div class="input-group md-form form-sm form-1 pl-0" style="margin-bottom:10px;">
+                <img src="assets/Rent!.jpg">
+    
+              </div>
+            </form>
+          </li>
+        </ul>&nbsp;&nbsp;&nbsp;
+      <i class="fa fa-map-marker fa-lg city" style="color:tomato" aria-hidden="true" data-controls-modal="#login-modal"
+        data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#citymodal"></i>
+      <h6 style="color:white;font-size: 20px;">&nbsp;{{city}}&emsp;&nbsp;</h6>
+    
+
+  </div>
+  <div style=" text-align:center ">
+        <!-- Navbar content -->
+        <div style="display:inline-block">
+            <a class="btn" href="#" style="color:white">
+              <h6 style="color:white;font-size: 20px;">&nbsp;Home&nbsp;</h6>
+            </a></div><i class="fa fa-home text-grey fa-xs " style="color:lightgray;" aria-hidden="true"></i>        <div style="display:inline-block" ><a class="btn" *ngIf="username=='noLoggedInUser', else helloUser" data-toggle="modal" data-target="#LoginModal" style="text-decoration:none"><h6 style="color:white;font-size: 20px;">&nbsp;Login&nbsp;</h6>
+        </a></div><i class="fa fa-sign-in text-grey fa-xs " style="color:lightgray;" aria-hidden="true"></i>
+
+        <ng-template #helloUser>
+                <a href='profile' class="btn"style="text-decoration:none"><h6 style="color:white;font-size: 20px;">&nbsp;{{username}}&nbsp;</h6></a>
+                <a class="btn" (click)=logout() style="text-decoration:none"><h6 style="color:white;font-size: 20px;">&nbsp;logout&nbsp;</h6></a>
+            </ng-template>
+
+            <div  style="display:inline-block"><a routerLink="/register" style="text-decoration:none"><h6 *ngIf="username=='noLoggedInUser'" style="color:white;font-size: 20px;">&nbsp;&emsp;signup&nbsp;</h6>
+            </a></div><i class="fa fa-user-plus text-grey fa-xs " style="color:lightgray;" aria-hidden="true"></i>
+    
+        <div style="display:inline-block"><a routerLink="/cartpage" style="text-decoration:none" ><h6 *ngIf="cart=='items', else hellocart" style="color:greenyellow;font-size: 20px;">&nbsp;&emsp;cart&nbsp;</h6>
+        </a></div><i class="fa fa-cart-plus text-grey fa-xs " style="color:lightgray;" aria-hidden="true"></i>
+        <ng-template #hellocart>
+        <h6 style="color:white;font-size: 20px;">&nbsp;&emsp;cart&nbsp;</h6>
+      </ng-template>
+       
+</div>
+ </nav>
+      
+
+<!--**************************************-->
+
+ 
+ <br/>
+ <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(49, 175, 161)">
+              <h5 class="modal-title" id="exampleModalLabel" style="-webkit-text-fill-color: white; font-size: 20px;">Login</h5>
+              <button style="-webkit-text-fill-color: white" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <app-login></app-login>
+            </div>
+            <div class="modal-footer" style="background-color: turquoise">
+            </div>
+          </div>
+        </div>
+      </div>
