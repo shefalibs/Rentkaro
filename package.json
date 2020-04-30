@@ -23,7 +23,7 @@
     "bootstrap": "^4.3.1",
     "bootstrap4": "0.0.1-security",
     "crypto-js": "^3.1.9-1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-image-zoom": "^0.4.1",
     "ngx-pagination": "^4.1.0",
     "ngx-take-until-destroy": "^5.4.0",
